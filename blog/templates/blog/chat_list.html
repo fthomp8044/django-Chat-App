@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<h1>This is the chat list</h1>
+<div class="centerstage">
+  {% for chat in chat_list %}
+  <div class="chat"> -->
+    <!-- #if your able to click chat.name it will take you to chat detail where the pk is equal to that chats.pk -->
+    <!-- <li><a href="{%  url 'chat_detail' pk=chat.id%}">{{ chat.name }}</a></li>
+  </div>
+</div>
+{% endfor %}
+{% endblock content %}

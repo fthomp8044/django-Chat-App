@@ -16,8 +16,10 @@ class CustomUserChangeForm(UserChangeForm):
         model = CustomUser
         fields = ('username', 'email')
 
-class CustomUserChangeForm(UserChangeForm):
-
-    class Meta:
-        model = CustomUser
-        fields = ('username', 'email')
+#
+# class ProfileCreationForm(UserCreationForm):
+#     #meta provides extra info about this particular class we are createing. its a django syntax
+#     class Meta:
+#
+#         model = Profile
+#         fields= ('User', 'bio', 'location')

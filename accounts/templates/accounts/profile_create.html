@@ -1,0 +1,12 @@
+{% extends 'accounts/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h1>Create Profile Page</h1>
+<form enctype='multipart/form-data' method="post">
+  {csrf_token}
+  <!-- #adding a crispy form -->
+  {{ form | crispy}}
+  <button class='btn btn-primary signup-btn' type='submit'>Save Profile</button>
+</form>
+{% endblock content %}
+</form>
