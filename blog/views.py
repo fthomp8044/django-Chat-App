@@ -12,7 +12,7 @@ from django.contrib.auth.decorators import login_required
 class ChatListView(generic.ListView):
     model = Chat
     context_object_name = 'chat_list'
-    template_name = '/blog/chat_list.html'
+    template_name = 'blog/chat_list.html'
 
     # def get_queryset(self):
     #     return Chat.objects.filter(name=self.request.user)
@@ -20,6 +20,8 @@ class ChatListView(generic.ListView):
 
 class ChatDetailView(generic.DetailView):
     model = Chat
+    template_name = 'blog/chat_detail.html'
+
 
 
 class CommentCreateView(LoginRequiredMixin, generic.CreateView):
@@ -66,7 +68,7 @@ def add_comment_to_chat(request, pk):
             comment = form.save(commit=False)
             comment.chat = chat
             comment.save()
-            return redirect('chat_detail', pk=chat.pk)
+            return redirect('chat_detail', pk=chat.id)
             #if know one fills out comment form
     else:
         form = CommentForm()

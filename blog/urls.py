@@ -3,7 +3,7 @@ from django.urls import path
 
 from . import views
 
-app_name = 'chats'
+app_name = 'blog'
 
 urlpatterns = [
     path('<int:pk>/comment/', views.add_comment_to_chat, name='add_comment_to_chat'),

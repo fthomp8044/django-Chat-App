@@ -139,5 +139,5 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = '/'
 #by default MEDIA_URL and MEDIA_ROOT are empty and not displayed. make sure you install pillow than set this up at bottomVVVVV
-MEDIA_URL = '/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
